@@ -1,8 +1,7 @@
-﻿using Strategy.Domain.Commom;
-using Strategy.Domain.InputModels;
-using Strategy.Domain.Interfaces;
+﻿using Strategy.Commom;
+using Strategy.Interfaces;
 
-namespace Strategy.Services
+namespace Strategy.ComInterface
 {
     public class Iss : IImposto
     {

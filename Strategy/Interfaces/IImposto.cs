@@ -1,6 +1,6 @@
-﻿using Strategy.Domain.InputModels;
+﻿using Strategy.Commom;
 
-namespace Strategy.Domain.Interfaces
+namespace Strategy.Interfaces
 {
     public interface IImposto
     {

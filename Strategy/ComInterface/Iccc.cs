@@ -1,8 +1,7 @@
-﻿using Strategy.Domain.Commom;
-using Strategy.Domain.InputModels;
-using Strategy.Domain.Interfaces;
+﻿using Strategy.Commom;
+using Strategy.Interfaces;
 
-namespace Strategy.Services
+namespace Strategy.ComInterface
 {
     public class Iccc : IImposto
     {
@@ -10,7 +9,7 @@ namespace Strategy.Services
         {
             return orcamento.Valor switch
             {
-                < Constantes.ValorMinimo => orcamento.Valor * Constantes.IcccJurusBaixo,
+                < Constantes.ValorMinimo => orcamento.Valor * Constantes.Icms,
                 > Constantes.ValorMaximo => orcamento.Valor * Constantes.IcccJurusAlto + Constantes.AcrescimoIccc,
                 _ => orcamento.Valor * Constantes.IcccJurusMedio
             };
