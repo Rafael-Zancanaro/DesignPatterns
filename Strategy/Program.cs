@@ -15,7 +15,7 @@ namespace Strategy
             IImposto icms = new Icms();
             IImposto iccc = new Iccc();
 
-            Orcamento orcamento = new(50, 3);
+            Orcamento orcamento = new(50);
 
             CalculadorDeImposto.RealizarCalculo(orcamento, iss);
             CalculadorDeImposto.RealizarCalculo(orcamento, icms);
@@ -25,7 +25,14 @@ namespace Strategy
 
             #region Com corrente
 
-            Orcamento orcamento1 = new(500.0, 3);
+            var lista = new List<Item>() 
+            { 
+                new("Lápis"), 
+                new("Caneta"), 
+                new("Borracha") 
+            };
+
+            Orcamento orcamento1 = new(500.0, lista);
 
             var baseDesconto = MontarCorrente();
             double desconto = baseDesconto.Desconta(orcamento1);
