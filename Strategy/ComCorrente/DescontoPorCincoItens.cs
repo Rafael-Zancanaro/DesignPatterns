@@ -9,7 +9,7 @@ namespace Strategy.ComCorrente
 
         public double Desconta(Orcamento orcamento)
             => orcamento.Itens.Count > 5
-                ? orcamento.Valor * Constantes.JurosMinimo
+                ? orcamento.Valor * Constantes.UmPorCento
                 : Proximo.Desconta(orcamento);
     }
 }

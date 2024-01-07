@@ -6,6 +6,6 @@ namespace Strategy.ComInterface
     public class Icms : IImposto
     {
         public double Calcula(Orcamento orcamento)
-            => orcamento.Valor * Constantes.Icms;
+            => orcamento.Valor * Constantes.CincoPorCento;
     }
 }

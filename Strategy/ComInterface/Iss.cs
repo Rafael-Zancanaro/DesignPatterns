@@ -6,6 +6,6 @@ namespace Strategy.ComInterface
     public class Iss : IImposto
     {
         public double Calcula(Orcamento orcamento)
-            => orcamento.Valor * Constantes.Iss;
+            => orcamento.Valor * Constantes.SeisPorCento;
     }
 }

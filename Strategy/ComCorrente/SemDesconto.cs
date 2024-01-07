@@ -8,6 +8,6 @@ namespace Strategy.ComCorrente
         public IDesconto Proximo { get; set; }
 
         public double Desconta(Orcamento orcamento)
-            => Constantes.ValorZero;
+            => Constantes.ZeroPorCento;
     }
 }

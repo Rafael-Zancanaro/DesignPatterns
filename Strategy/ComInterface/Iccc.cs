@@ -9,9 +9,9 @@ namespace Strategy.ComInterface
         {
             return orcamento.Valor switch
             {
-                < Constantes.ValorMinimo => orcamento.Valor * Constantes.Icms,
-                > Constantes.ValorMaximo => orcamento.Valor * Constantes.IcccJurusAlto + Constantes.AcrescimoIccc,
-                _ => orcamento.Valor * Constantes.IcccJurusMedio
+                < Constantes.ValorUmMil => orcamento.Valor * Constantes.CincoPorCento,
+                > Constantes.ValorTresMil => orcamento.Valor * Constantes.OitoPorCento + Constantes.AcrescimoIccc,
+                _ => orcamento.Valor * Constantes.SetePorCento
             };
         }
     }
