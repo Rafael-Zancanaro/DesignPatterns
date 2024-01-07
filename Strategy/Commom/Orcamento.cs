@@ -3,7 +3,7 @@
     public class Orcamento
     {
         public double Valor { get; set; }
-        public List<Item> Itens{ get; set; }
+        public List<Item> Itens { get; set; }
 
         public Orcamento(double valor)
         {
@@ -23,7 +23,7 @@
 
         public Item(string nome)
         {
-           Nome = nome;
+            Nome = nome;
         }
     }
 }

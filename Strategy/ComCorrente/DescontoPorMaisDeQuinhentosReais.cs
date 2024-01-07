@@ -7,9 +7,9 @@ namespace Strategy.ComCorrente
     {
         public IDesconto Proximo { get; set; }
 
-        public double Desconta(Orcamento orcamento)
+        public double CalcularDesconto(Orcamento orcamento)
             => orcamento.Valor > Constantes.ValorQuinhentos
                 ? orcamento.Valor * Constantes.SetePorCento
-                : Proximo.Desconta(orcamento);
+                : Proximo.CalcularDesconto(orcamento);
     }
 }

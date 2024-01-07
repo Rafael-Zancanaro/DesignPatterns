@@ -2,9 +2,9 @@
 
 namespace Strategy.ComCorrente
 {
-    public class BaseDesconto
+    public class CalculadorDeDescontos
     {
-        public static IDesconto MontarCorrente()
+        public static IDesconto MontarCadeiaDesconto()
         {
             IDesconto d1 = new DescontoPorCincoItens();
             IDesconto d2 = new DescontoPorMaisDeQuinhentosReais();

@@ -1,7 +1,7 @@
 ﻿using Strategy.ComInterface;
 using Strategy.Commom;
 using Strategy.Interfaces;
-using static Strategy.ComCorrente.BaseDesconto;
+using static Strategy.ComCorrente.CalculadorDeDescontos;
 
 namespace Strategy
 {
@@ -25,17 +25,17 @@ namespace Strategy
 
             #region Com corrente
 
-            var lista = new List<Item>() 
-            { 
-                new("Lápis"), 
-                new("Caneta"), 
-                new("Borracha") 
+            var lista = new List<Item>()
+            {
+                new("Lápis"),
+                new("Caneta"),
+                new("Borracha")
             };
 
             Orcamento orcamento1 = new(500.0, lista);
 
-            var baseDesconto = MontarCorrente();
-            double desconto = baseDesconto.Desconta(orcamento1);
+            var baseDesconto = MontarCadeiaDesconto();
+            double desconto = baseDesconto.CalcularDesconto(orcamento1);
 
             Console.WriteLine("Seu desconto pela compra foi de: " + desconto + " R$");
 

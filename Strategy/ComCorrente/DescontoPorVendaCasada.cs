@@ -7,13 +7,13 @@ namespace Strategy.ComCorrente
     {
         public IDesconto Proximo { get; set; }
 
-        public double Desconta(Orcamento orcamento)
+        public double CalcularDesconto(Orcamento orcamento)
         {
             var aconteceuVendaCasada = Existe(Constantes.Lapis, orcamento) && Existe(Constantes.Caneta, orcamento);
             return aconteceuVendaCasada
                 ? orcamento.Valor * Constantes.CincoPorCento
-                : Proximo.Desconta(orcamento);
-        } 
+                : Proximo.CalcularDesconto(orcamento);
+        }
 
         private static bool Existe(string nomeItem, Orcamento orcamento)
             => orcamento.Itens.Any(x => x.Nome.Equals(nomeItem, StringComparison.InvariantCultureIgnoreCase));

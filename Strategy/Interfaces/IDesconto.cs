@@ -4,7 +4,7 @@ namespace Strategy.Interfaces
 {
     public interface IDesconto
     {
-        double Desconta(Orcamento orcamento);
+        double CalcularDesconto(Orcamento orcamento);
         IDesconto Proximo { get; set; }
     }
 }
